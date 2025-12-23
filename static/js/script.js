@@ -10,7 +10,7 @@ let myChart = null;
 
 async function fetchStats() {
     try {
-        const response = await fetch('static/data/stats.json');
+        const response = await fetch('/api/stats');
         const data = await response.json();
 
         if (data.daily_hpr !== undefined) {
@@ -34,7 +34,7 @@ function formatPct(val) {
 
 async function loadComparisonTable() {
     try {
-        const response = await fetch('static/data/comparison.json');
+        const response = await fetch('/api/comparison');
         const data = await response.json();
 
         if (data.error) {
@@ -87,7 +87,7 @@ window.openModal = async function (type) {
 
     // Fetch History
     try {
-        const response = await fetch('static/data/history.json');
+        const response = await fetch('/api/history');
         const history = await response.json();
 
         renderChart(type, history);

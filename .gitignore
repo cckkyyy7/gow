@@ -2,8 +2,8 @@
 .env
 current_principal.txt
 
-# Data Files (Tracked for Vercel/GitHub Actions)
-# *.csv  <-- Commented out to allow tracking
+# Data Files (User requested to hide CSVs)
+*.csv
 start_principal.txt
 
 # Python
@@ -17,6 +17,6 @@ venv/
 .idea/
 .DS_Store
 
-# Static build artifacts
-# We need these for deployment
-
+# Static build artifacts (optional, but usually we commit these for Pages if usage is simple)
+# But if we want to run build locally and push the RESULT, we KEEP static/data/*.json
+# We DO NOT ignore static/data/*.json because GitHub Pages needs them.

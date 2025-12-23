@@ -1,1 +1,22 @@
-.vercel
+# Sensitive Data
+.env
+current_principal.txt
+
+# Data Files (Tracked for Vercel/GitHub Actions)
+# *.csv  <-- Commented out to allow tracking
+start_principal.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Static build artifacts
+# We need these for deployment
+

@@ -8,10 +8,18 @@ DOMAIN="yourdomain.com" # CHANGE THIS
 
 echo "Starting Deployment for $APP_NAME..."
 
+# Root Check
+if [ "$(id -u)" -eq 0 ]; then
+    alias sudo=""
+    SUDO=""
+else
+    SUDO="sudo"
+fi
+
 # 1. Install System Dependencies
 echo "Installing dependencies..."
-sudo apt-get update
-sudo apt-get install -y python3-venv python3-pip nginx certbot python3-certbot-nginx
+$SUDO apt-get update
+$SUDO apt-get install -y python3-venv python3-pip nginx certbot python3-certbot-nginx
 
 # 2. Setup Python Environment
 echo "Setting up Virtual Environment..."

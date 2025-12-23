@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>財神系統 | AI 加密貨幣量化基金</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">財神系統 <span class="ai-badge">AI CORE</span></div>
+        <div class="nav-links">
+            <a href="#dashboard">實時數據</a>
+            <a href="#about">關於我們</a>
+            <a href="#strategies">投資策略</a>
+            <a href="#tech">AI技術</a>
+            <a href="#contact" class="cta-btn-small">加入社群</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content reveal">
+            <h2 class="slogan" data-text="癲者統治地球 – AI加速，夠快夠癲！">癲者統治地球 – AI加速，夠快夠癲！</h2>
+            <h1 class="main-title">財神系統</h1>
+            <p class="subtitle">運用深度學習與實時數據分析，執行精準合約策略，追求穩定超額回報。</p>
+            <a href="https://t.me/your_telegram_link" target="_blank" class="cta-btn-main">加入我們的 Telegram 社群</a>
+        </div>
+
+        <!-- Live Data Dashboard -->
+        <div id="dashboard" class="dashboard-grid reveal">
+            <div class="data-card" onclick="openModal('daily')">
+                <h3>昨日收益 (Day)</h3>
+                <div class="value positive" id="val-daily">+9.2%</div>
+                <div class="sub-text">+18% vs 上一日</div>
+                <div class="card-glow"></div>
+            </div>
+            <div class="data-card" onclick="openModal('monthly')">
+                <h3>本月收益 (Month)</h3>
+                <div class="value positive" id="val-monthly">+12.4%</div>
+                <div class="sub-text">+24% vs 上月</div>
+                <div class="card-glow"></div>
+            </div>
+            <div class="data-card" onclick="openModal('yearly')">
+                <h3>今年收益 (Year)</h3>
+                <div class="value positive" id="val-yearly">+30.2%</div>
+                <div class="sub-text">+31% vs 上年</div>
+                <div class="card-glow"></div>
+            </div>
+            <div class="data-card highlight-card">
+                <h3>預期回報 (2026-27)</h3>
+                <div class="value gold-text">>300%</div>
+                <div class="sub-text">兩年實現10倍增長*</div>
+                <div class="card-glow"></div>
+            </div>
+        </div>
+
+        <div class="risk-badges reveal">
+            <div class="badge"><i class="fas fa-shield-alt"></i> 動態止損</div>
+            <div class="badge"><i class="fas fa-layer-group"></i> 多層分散</div>
+            <div class="badge"><i class="fas fa-balance-scale"></i> 套利低波動</div>
+        </div>
+        <p class="disclaimer-small">*歷史績效不代表未來表現；預期回報基於模型預測，非保證。</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-container">
+        <h2 class="section-title reveal">財神系統，專業AI領先</h2>
+        <div class="about-content reveal">
+            <div class="about-text">
+                <p>財神系統是專注加密貨幣量化的專業基金，結合資深交易專家與頂尖AI工程師。透過自研深度學習模型，實現策略訂製、數據分析與全自動執行，系統性捕捉市場機會，降低人為風險。</p>
+                <div class="philosophy-box">
+                    <h4>我們的理念</h4>
+                    <p>「癲者統治地球，癲者成為首富。」</p>
+                    <p>在AI加速的癲狂年代，不夠癲即落後時代。#未來常態就是癲。我們選擇直接讓AI幫我賺錢 – 夠快夠癲！</p>
+                </div>
+                <div class="trust-indicators">
+                    <div class="trust-card">
+                        <div class="trust-icon"><i class="fas fa-check-circle"></i></div>
+                        <h3>合規運作</h3>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>多年量化經驗</h3>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-icon"><i class="fas fa-lock"></i></div>
+                        <h3>機構級風控</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategies Section -->
+    <section id="strategies" class="section-container">
+        <h2 class="section-title reveal">財神系統多元AI驅動策略組合</h2>
+        <div class="strategies-grid reveal">
+            <div class="strategy-card">
+                <div class="icon"><i class="fas fa-chess-rook"></i></div>
+                <h3>合約網格長線策略</h3>
+                <p>穩定捕捉波動區間，自動調整倉位，適合長期持有。</p>
+            </div>
+            <div class="strategy-card">
+                <div class="icon"><i class="fas fa-chart-area"></i></div>
+                <h3>合約中線策略</h3>
+                <p>基於趨勢預測，精準進出場，平衡風險與收益。</p>
+            </div>
+            <div class="strategy-card">
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>合約短線策略</h3>
+                <p>每日機會捕捉，利用AI實時信號，快速累積優勢。</p>
+            </div>
+            <div class="strategy-card">
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <h3>多平台合約套利</h3>
+                <p>跨交易所價差套利，低風險穩健收益，24/7自動執行。</p>
+            </div>
+        </div>
+        <p class="strategy-note">預期回報：透過這些策略，預期2026年及2027年回報超過300%+，兩年實現10倍增長。</p>
+    </section>
+
+    <!-- Unique Advantage (Comparison) -->
+    <section id="comparison" class="section-container">
+        <h2 class="section-title reveal">財神系統與別不同的獨有優勢</h2>
+        <div class="comparison-table-wrapper reveal">
+            <table id="comparison-table">
+                <!-- Populated by JS -->
+            </table>
+        </div>
+    </section>
+
+    <!-- AI Tech Section -->
+    <section id="tech" class="section-container ai-section">
+        <h2 class="section-title reveal">領先AI技術核心</h2>
+        <div class="tech-content reveal">
+            <ul>
+                <li><strong>自研深度學習模型</strong>：整合海量鏈上與市場數據</li>
+                <li><strong>個性化策略訂製</strong>：動態適應不同資金體量</li>
+                <li><strong>實時深度數據分析</strong>：毫秒級反應速度</li>
+                <li><strong>全自動化交易執行</strong>：24/7 無間斷獲利</li>
+            </ul>
+            <div class="tech-quote">
+                "幣圈投資者將會面對人vs AI的必然局面...人類100倍以上的數據分析能力，你能比AI更強嗎？加入AI財神系統，80％+勝率策略。"
+            </div>
+        </div>
+    </section>
+
+    <!-- Entry & Contact -->
+    <section id="contact" class="section-container contact-section">
+        <div class="entry-requirements reveal">
+            <h3>加入門檻</h3>
+            <div class="price-tag">100,000 USDT</div>
+            <p>最低投資額</p>
+        </div>
+
+        <div class="contact-form-wrapper reveal">
+            <h2>開始您的財神系統投資之旅</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="姓名" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="預計投資金額 (USDT)" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="留言"></textarea>
+                </div>
+                <button type="submit" class="cta-btn-main full-width">提交並加入 Telegram 社群</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Telegram</a>
+            <a href="#">Email</a>
+            <a href="#">免責聲明</a>
+            <a href="#">隱私政策</a>
+        </div>
+        <p>&copy; 2025 財神系統. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modals for Charts -->
+    <div id="chartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">收益圖表</h3>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+            <p class="scroll-hint">向左滑動查看更多歷史數據</p>
+        </div>
+    </div>
+
+    <script src="static/js/script.js?v=2365"></script>
+</body>
+
+</html>
